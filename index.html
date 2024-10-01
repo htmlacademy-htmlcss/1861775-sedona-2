@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Седона. Городок В Аризоне</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <header class="page-header" data-test="header">
@@ -35,7 +36,7 @@
           </li>
         </ul>
       </nav>
-      <a class="header-button" href="#search">Хочу сюда!</a>
+      <a class="header-button button" href="#search">Хочу сюда!</a>
     </header>
     <main class="main-index" data-test="main">
       <section class="hero" data-test="hero">
@@ -91,13 +92,13 @@
       <section class="search" data-test="search" id="search">
         <h2 class="search-title">Заинтересовались?</h2>
         <p class="search-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <a class="search-button" href="#">Поиск гостиницы в Седоне</a>
+        <a class="search-button button" href="#">Поиск гостиницы в Седоне</a>
       </section>
       <section class="subscribe subscribe-theme-custom"  data-test="subscribe" >
         <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
         <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-        <p clss="subscribe-form-name">
+        <p clss="subscribe-form">
         <label class="visually-hidden" for="user-email">Ваш email</label>
         <input type="text" id="user-email" name="user-email" placeholder="Ваш email">
         </p>
@@ -106,7 +107,7 @@
       </section>
     </main>
     <footer class="page-footer" data-test="footer">
-      <ul class="social-list">
+      <ul class="social">
         <li class="social-item">
           <a class="social-link" href="#">
             <span class="visually-hidden">ВКонтакте</span>
@@ -125,7 +126,7 @@
       </ul>
       <a class="phone" href="tel:+78128121212">+7(812)812-12-12</a>
       <a class="copyright" href="https://htmlacademy.ru/">
-        <img class="htmlacademy-logo" src="#" alt="Логотип Html Academy">
+        <img class="copyright-image" src="#" alt="Логотип Html Academy">
       </a>
     </footer>
   </body>
