@@ -39,6 +39,7 @@
       <a class="header-button button" href="#">Хочу сюда!</a>
     </header>
     <main class="main-inner" data-test="main">
+      <section class="filters" data-test="filter">
       <h1 class="inner-header-title">Гостиницы Седоны</h1>
       <ol class="breadcrumbs ">
         <li class="breadcrumbs-item">
@@ -50,7 +51,6 @@
           <a class="breadcrumbs-link" href="#">Гостиницы</a>
         </li>
       </ol>
-      <section class="filters" data-test="filter">
         <h2 class="visually-hidden">Фильтры</h2>
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" form="get" >
           <fieldset class="catalog-filter-group">
@@ -110,8 +110,8 @@
               <span class="visually-hidden">Управление верхней границей стоимости</span>
             </button>
           </fieldset>
-            <button class="catalog-filter-submit button" type="submit">Применить</button>
-            <button class="catalog-filter-reset button" type="reset">Сбросить</button>
+            <button class="filter-submit-button filter-button" type="submit">Применить</button>
+            <button class="filter-reset-button filter-button" type="reset">Сбросить</button>
         </form>
       </section>
       <section class="catalog-products" data-test="catalog">
@@ -158,8 +158,8 @@
             </a>
             <p class="product-card-type">Гостиница</p>
             <p class="product-card-price">От 5000 ₽</p>
-            <a class="product-card-button button button" href="#">Подробнее</a>
-            <button class="favorite-button button button" type="button">В избранное</button>
+            <a class="product-card-button button" href="#">Подробнее</a>
+            <button class="favorite-button button" type="button">В избранном</button>
             <p class="product-card-stars product-card-stars-four"><span class="visually-hidden">4 звезды</span></p>
             <p class="product-card-rating">Рейтинг:<span> 9,2</span></p>
            </li>
@@ -209,9 +209,9 @@
           </li>
         </ul>
       </section>
-      <section class="subscribe"  data-test="subscribe" >
-        <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
-        <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+      <section class="subscribe subscribe-catalog "  data-test="subscribe" >
+        <h2 class="subscribe-title subscribe-title-catalog">Подпишитесь на рассылку</h2>
+        <p class="subscribe-text subscribe-text-catalog">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
         <p clss="subscribe-form">
         <label class="visually-hidden" for="user-email">Ваш email</label>
