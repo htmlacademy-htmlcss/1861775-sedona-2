@@ -4,7 +4,7 @@
   font-weight: 400;
   src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
-}
+} /* разобратся с пробелами,спросить как лушче 2 пробела или ноль*/
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
@@ -13,7 +13,7 @@
   font-display: swap;
 }
 body {
-  font-family: "PT Sans" , sans-serif ;
+  font-family: "PT Sans" , "Arial", sans-serif ;
   line-height: 21px;
   font-size: 18px;
   font-weight: 400;
@@ -21,11 +21,19 @@ body {
   color: #333333;
   background-color: #f2f2f2;
 }
-.page-header {
-  color:#000000;
-  background-color: #ffffff;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
-.navigation-link{
+.navigation-link .navigation-user-link{
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
@@ -34,80 +42,48 @@ body {
   text-decoration: none;
 
 }
-.navigation-user-link{
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 24px;
-  color:#000000;
-  text-align: center;
-  text-decoration: none;
-}
+/* кнопки  */
 .button{
 font-size: 20px;
 font-weight: 700;
 line-height: 36px;
 text-align: center;
-background-color:#756157;
 color:#ffffff;
 text-decoration: none;
 text-transform: uppercase;
 font-family: inherit;
 }
-.subscribe-buttom{
-background-color:#82B3D3;
+.button-basic {
+  background-color: #756157;
 }
-.filter-button{
-font-family: inherit;
-font-size: 16px;
-font-weight: 700;
-line-height: 20px;
-text-align: center;
-color:#FFFFFF;
+.button-second {
+  background-color: #82b3d3;
 }
-.filter-submit-button{
-  background-color:#82B3D3;
+.button-favorite{
+  background-color: #7DB54F;
 }
-.filter-reset-button{
-background-color: transparent;
-}
-.add-favorite-button{
-font-family:inherit;
-font-size: 16px;
-font-weight: 700;
-line-height: 20px;
-text-align: center;
-background-color:#82B3D3;
-}
-.product-card-button{
-font-family:inherit;
-font-size: 16px;
-font-weight: 700;
-line-height: 20px;
-text-align: center;
-}
-.favorite-button{
-font-family: inherit;
-font-size: 16px;
-font-weight: 700;
-line-height: 20px;
-text-align: center;
-background-color: #7DB54F;
 
+/*index*/
+
+.page-body {
+  background-color: #ffffff;
+  box-shadow: 0 0 15px 0 #00000033;
 }
 .hero{
-  background-image:url("../images/vector.svg"), url("../images/background-header.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% auto, cover;
-  background-position: left bottom, left top;
+background-image:url("../images/vector.svg"), url("../images/background-header.jpg");
+background-repeat: no-repeat;
+background-size: 100%, cover;
+background-position: center bottom, center;
+background-color: #3e9fe033;
 }
-.advantages-lead{
+.second-title{
 font-size: 30px;
 font-weight: 700;
 line-height: 36px;
 text-align: center;
 color: #000000;
 }
-.advantages-text{
+.lead-text{
 font-size: 22px;
 font-weight: 400;
 line-height: 26px;
@@ -124,27 +100,16 @@ text-transform: uppercase;
 text-align: center;
 }
 .advantages-item-large{
-  background-color:#82B3D3;
-  color: #ffffff;
+background-color:#82B3D3;
+color: #ffffff;
 }
 .advantages-light {
 background-color:rgba(131, 179, 211, 0.12);
 }
 .advantages-medium{
-  background:rgba(131, 179, 211, 0.2);
+background:rgba(131, 179, 211, 0.2);
 }
-.infrastructure-title{
-font-size: 30px;
-font-weight: 700;
-line-height: 36px;
-text-align: center;
-}
-.infrastructure-lead{
-font-size: 22px;
-font-weight: 400;
-line-height: 26px;
-text-align: center;
-}
+
 .infrastructure-description{
 font-size: 18px;
 font-weight: 400;
@@ -154,47 +119,33 @@ text-align: center;
 .infrastructure-medium{
 background-color: rgba(131, 179, 211, 0.12);
 }
-.search-title{
-font-size: 30px;
-font-weight: 700;
-line-height: 36px;
-text-align: center;
-}
-.search-description{
-font-size: 22px;
-font-weight: 400;
-line-height: 26px;
-text-align: center;
-}
+/*subscribe*/
 .subscribe-theme-custom{
-  background-image: url("../images/background-footer.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% auto, cover;
-
+background-image: url("../images/background-footer.jpg");
+background-repeat: no-repeat;
+background-size: 100% auto, cover;
 }
-.subscribe-title{
-font-size: 30px;
-font-weight: 700;
-line-height: 36px;
-text-align: center;
-color: #FFFFFF;
-}
-.subscribe-text{
-font-size: 22px;
-font-weight: 400;
-line-height: 26px;
-text-align: center;
+.subscribe-title-custom{
 color:#FFFFFF;
 }
-.subscribe-buttom{
-  background-color:#82B3D3;
-  color:#FFFFFF;
+.subscribe-text-custom{
+color:#FFFFFF;
 }
+/*footer*/
+.phone{
+font-size: 40px;
+line-height: 40px;
+text-decoration: none;
+color:#000000;
+}
+
+
+/*catalog*/
 .filters{
-  color:#FFFFFF;
-  background-image: url("../images/background-catalog.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% auto, cover;
+color:#FFFFFF;
+background-image: url("../images/background-catalog.jpg");
+background-repeat: no-repeat;
+background-size: 100% auto, cover;
 }
 .inner-header-title{
 font-size: 60px;
@@ -221,18 +172,12 @@ font-weight: 400;
 line-height: 23px;
 text-align: left;
 }
-.catalog-filter-title{
-font-size: 20px;
-font-weight: 700;
-line-height: 24px;
-text-align: left;
-}
 .filter-range-control{
 font-size: 18px;
 font-weight: 400;
 line-height: 24px;
 text-align: right;
-color:rgb(135, 135, 135);
+color:rgba(135, 135, 135);
 }
 .catalog-products-title{
 font-size: 30px;
@@ -265,7 +210,6 @@ text-align: left;
 text-align: right;
 }
 .product-card-rating{
-
 font-size: 16px;
 line-height: 20px;
 text-align: center;
@@ -280,18 +224,10 @@ background-color:#82B3D3;
 text-decoration: none;
 }
 .pagination-current{
-  color:#000000;
-  background-color:#F2F2F2;
-}
-.subscribe-title-catalog{
 color:#000000;
+background-color:#F2F2F2;
 }
-.subscribe-text-catalog{
-color:#333333;
-}
-.phone{
-font-size: 40px;
-line-height: 40px;
-text-decoration: none;
-color:#000000;
-}
+
+
+
+/* разобратся с цветом подписки в каталоге 'честное бойтскаунтное'*/
