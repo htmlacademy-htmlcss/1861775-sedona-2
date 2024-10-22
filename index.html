@@ -7,40 +7,40 @@
   </head>
   <body>
     <div class="page-container">
-    <header class="page-header" data-test="header">
-      <nav class="navigation">
-        <a class="navigation-logo" href="#">
-          <img class="navigation-logo" src="images/logo.svg"  width="140" height="70"  alt="Логотип города Седона.">
+      <header class="page-header" data-test="header">
+        <a class="navigation-logo" href="index.html">
+          <img class="page-header-logo" src="images/logo.svg" width="140" height="70" alt="Логотип города Седона.">
         </a>
-        <ul class="navigation-list">
-          <li class="navigation-item">
-            <a class="navigation-link navigation-link-current" href="index.html" >Главная</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#" >О Седоне</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="catalog.html" >Гостиницы</a>
-          </li>
-        </ul>
+        <nav class="navigation">
+          <ul class="navigation-list">
+            <li class="navigation-item">
+              <a class="navigation-link">Главная</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#" >О Седоне</a>
+            </li>
+            <li class="navigation-item navigation-link-activated">
+              <a class="navigation-link" href="catalog.html">Гостиницы</a>
+            </li>
+          </ul>
+        </nav>
         <ul class="navigation-user">
           <li class="navigation-user-item">
-            <a class="navigation-user-link" href="#">
+            <a class="navigation-link navigation-user-link-search" href="#">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
           <li class="navigation-user-item">
-            <a class="navigation-user-link" href="#">
+            <a class="navigation-link navigation-user-link-favorite" href="#">
               <span class="visually-hidden">Избранное</span>
               <span class="notification-number">12</span>
             </a>
           </li>
-          <li class="navigation-item">
-            <a class=" button button-basic " href="catalog.html">Хочу сюда!</a>
+          <li class="navigation-user-item">
+            <a class="navigation-user-link button button-basic header-button " href="catalog.html">Хочу сюда!</a>
           </li>
         </ul>
-      </nav>
-    </header>
+      </header>
     <main class="main-index" data-test="main">
       <section class="hero" data-test="hero">
         <h1 class="visually-hidden">Седона - городок в Аризоне</h1>
@@ -111,7 +111,6 @@
         </ul>
       </section>
       <section class="search search-background" data-test="search">
-        <h2 class="visually-hidden"></h2>
         <p class="search-title second-title">Заинтересовались?</p>
         <p class="search-description lead-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц
           в Седоне</p>
