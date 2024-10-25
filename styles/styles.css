@@ -37,11 +37,11 @@ font-weight: 400;
 font-style: normal;
 color: #333333;
 background-color: #ffffff;
-
 }
+/* }
 ul, li {
   list-style: none;
-}
+} */
 img {
   max-width: 100%;
   height: auto;
@@ -140,6 +140,7 @@ overflow: hidden;
   display: flex;
   align-items: center;
   padding: 0;
+  list-style: none;
 }
 .navigation-link{
 padding: 20px 16px;
@@ -149,6 +150,29 @@ line-height: 24px;
 color:inherit;
 text-decoration: none;
   }
+  .navigation-user-item:nth-child(1) {
+    background: url("../images/icons/search.svg") no-repeat 50% 50%;
+  }
+
+  .navigation-user-item:nth-child(2) {
+    background: url("../images/icons/heart.svg") no-repeat 50% 50%;
+  }
+  /* .notification-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 7px;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    color: #ffffff;
+    font-size: 10px;
+    line-height: 10px;
+    text-align: center;
+    background-color: #7db54f;
+    border-radius: 50%;
+  } */
 
   /*hero*/
 .hero{
@@ -180,6 +204,7 @@ background-color: #3e9fe033;
   flex-direction: row;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 .advantages-title{
 font-size: 24px;
@@ -246,6 +271,7 @@ background-color:rgba(131, 179, 211, 0.12);
    justify-content: center;
    align-items: center;
    padding: 0;
+   list-style: none;
  }
  .services-item {
  padding: 85px 81px;
@@ -299,12 +325,6 @@ background-color:rgba(131, 179, 211, 0.12);
   margin-bottom: 54px;
 
 }
-/*
-.subscribe-form {
-  display: flex;
-  justify-content: center;
-}
-  */
 .subscribe-form-input {
   width:452px;
   border-top-left-radius: 4px;
@@ -330,8 +350,35 @@ line-height: 40px;
 text-decoration: none;
 color:#000000;
 text-align: center;
+margin: auto;
+padding: 5px;
 }
-
+.social {
+  display: flex;
+  margin: auto 0;
+  list-style: none;
+}
+.social-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.social-item {
+  width: 47px;
+  height: 40px;
+}
+.social-item:nth-child(1) {
+  background: url("../images/icons/vk.svg") no-repeat;
+  background-position: center;
+}
+.social-item:nth-child(2) {
+  background: url("../images/icons/telegram.svg") no-repeat;
+  background-position: center;
+}
+.social-item:nth-child(3) {
+  background: url("../images/icons/youtube.svg") no-repeat;
+  background-position: center;
+}
 
 /*catalog*/
 .filters{
@@ -354,6 +401,7 @@ margin-bottom: 8px;
   display: flex;
   margin:0;
   padding: 0;
+  list-style: none;
 }
 .breadcrumbs-link{
 margin: 0;
@@ -394,6 +442,7 @@ margin-bottom: 32px;
   margin-bottom: 73px;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 .catalog-filter-item{
 font-size: 18px;
@@ -520,6 +569,7 @@ padding: 0;
   display: flex;
   flex-wrap: wrap;
   margin: 0 0 0 20px;
+  list-style: none;
 }
 .view-buttons-item {
   width: 48px;
@@ -528,27 +578,53 @@ padding: 0;
   border-radius: 4px;
   margin-left: 8px;
 }
+.view-buttons-item-current {
+  border: 2px solid #000000;
+}
+.view-buttons-item:nth-child(1) {
+  background: url("../images/icons/tile-view.svg") no-repeat;
+  background-position: center;
+}
+.view-buttons-item:nth-child(2) {
+  background: url("../images/icons/card-view.svg") no-repeat;
+  background-position: center;
+}
+.view-buttons-item:nth-child(3) {
+  background: url("../images/icons/list-view.svg") no-repeat;
+  background-position: center;
+}
 /*hotel list*/
+.product-list{
+display: grid;
+grid-template-columns: repeat(3, auto);
+gap: 20px;
+list-style-type: none;
+margin: 0 0 80px;
+padding: 0;
+}
+.product-card-content{
+  padding: 20px;
+  display: flex;
+}
 .product-card-link{
 font-size: 24px;
 font-weight: 700;
 line-height: 28px;
-text-align: left;
 color:#000000;
 text-decoration: none;
 margin: 0;
 padding: 0;
 }
 .product-card-type{
-text-align: left;
+
 }
 .product-card-price{
-text-align: right;
+
 }
 .product-card-rating{
 font-size: 16px;
 line-height: 20px;
-text-align: center;
+
 }
 
 
@@ -557,6 +633,7 @@ text-align: center;
   display: flex;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 .pagination-item:not(:last-child) {
   margin-right: 8px;
@@ -594,4 +671,6 @@ text-align: center;
     justify-content: center;
     align-items: center;
   }
-/* при приблежение у меня все съезжает,надо попроавить */
+/* при приблежение у меня все съезжает,надо попроавить
+   в инфроструктуре и тд все не в одну линиюю стоит
+   главная странница узка а котолок на всю */
