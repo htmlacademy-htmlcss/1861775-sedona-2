@@ -13,12 +13,12 @@
   font-display: swap;
 }
 /*общие стили*/
-
+/*
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-}
+} */
 
 html {
 min-height: 100%;
@@ -29,7 +29,8 @@ body {
 display: flex;
 flex-direction: column;
 height: 100%;
-margin: 0;
+width: 1200px;
+margin: 0 auto;
 font-family: "PT Sans" , "Arial", sans-serif ;
 line-height: 21px;
 font-size: 18px;
@@ -38,14 +39,10 @@ font-style: normal;
 color: #333333;
 background-color: #ffffff;
 }
-/* }
-ul, li {
-  list-style: none;
-} */
-img {
+/* img {
   max-width: 100%;
   height: auto;
-}
+} */
 .page-container{
   inline-size: 1200px;
   margin-inline: auto;
@@ -70,13 +67,15 @@ overflow: hidden;
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
-  padding: 8px 16px;
+  padding: 8px 0;
   border-radius: 4px;
+  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   border: none;
   cursor: pointer;
   color: #ffffff;
+
 }
 .header-button{
   padding: 8px 34px;
@@ -122,7 +121,7 @@ overflow: hidden;
   .page-header {
     color: #000000;
     padding: 0 70px;
-    width: 100%;
+    width: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -223,7 +222,6 @@ margin:0 28px 62px;
   min-width: calc(100%/3);
 
 }
-
 .advantages-card {
  margin: 102px 85px;
 }
@@ -380,13 +378,13 @@ padding: 5px;
   background-position: center;
 }
 
-/*catalog*/
+/*каталог*/
 .filters{
 color:#FFFFFF;
 background-image: url("../images/background-filters.jpg");
 background-repeat: no-repeat;
 background-size: cover;
-width: 100%;
+width: auto;
 padding: 35px 70px 70px;
 }
 .inner-header-title{
@@ -397,6 +395,7 @@ text-align: left;
 margin: 0;
 margin-bottom: 8px;
 }
+/* хлебные крошки */
 .breadcrumbs{
   display: flex;
   margin:0;
@@ -413,7 +412,15 @@ line-height: 21px;
 color:#FFFFFF;
 text-decoration: none;
 }
-/*catalog-filter*/
+.breadcrumbs-item {
+  margin-right: 28px;
+}
+.breadcrumbs-item:nth-child(1) {
+  background: url("../images/icons/home.svg") no-repeat;
+  background-position: center;
+}
+
+/*каталог инфраструктура */
 .catalog-filter{
   display: flex;
   align-items: flex-end;
@@ -459,11 +466,11 @@ gap:2px;
   position: relative;
 }
 .catalog-input-renge-input{
-  padding:12px 20px;
-  background-color: #f2f2f2;
-  border: none;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
+padding:12px 20px;
+background-color: #f2f2f2;
+border: none;
+border-top-left-radius: 4px;
+border-bottom-left-radius: 4px;
 font-size: 18px;
 font-weight: 700;
 line-height: 24px;
@@ -533,7 +540,7 @@ cursor: pointer;
   border-radius: 5px;
   cursor: pointer;
   }
-/*catalog-products*/
+/*каталог продуктов*/
 .catalog-products{
   padding: 50px 70px 60px 70px;
 }
@@ -593,40 +600,66 @@ padding: 0;
   background: url("../images/icons/list-view.svg") no-repeat;
   background-position: center;
 }
-/*hotel list*/
-.product-list{
-display: grid;
-grid-template-columns: repeat(3, auto);
-gap: 20px;
-list-style-type: none;
-margin: 0 0 80px;
-padding: 0;
+/*карточки отелей*/
+.catalog-list {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  padding: 0;
+  margin: 0 0 80px;
+  gap: 20px;
 }
-.product-card-content{
+.catalog-item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 16px;
+  column-gap: 20px;
+  width: 300px;
   padding: 20px;
-  display: flex;
+  margin: 0;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px #e6e6e6;
 }
-.product-card-link{
-font-size: 24px;
-font-weight: 700;
-line-height: 28px;
-color:#000000;
-text-decoration: none;
-margin: 0;
-padding: 0;
+.catalog-item-link:nth-child(1) {
+  grid-column: 1 / -1;
 }
-.product-card-type{
-
+.catalog-item-link:nth-child(2) {
+  grid-column: 1 / -1;
 }
-.product-card-price{
-
-}
-.product-card-rating{
-font-size: 16px;
-line-height: 20px;
-
+.catalog-item-image {
+  display: block;
+  margin: 0;
 }
 
+.catalog-item-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  padding: 0;
+  margin: 0;
+}
+
+.catalog-item-link {
+  color: #000000;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-decoration: none;
+}
+
+.catalog-type {
+  display: inline-block;
+  color: #333333;
+  width: 140px;
+  margin: 0;
+}
+
+.catalog-price {
+  display: inline-block;
+  color: #333333;
+  text-align: right;
+  width: 140px;
+  margin: 0;
+}
 
 /*pagination*/
 .pagination{
@@ -671,6 +704,7 @@ line-height: 20px;
     justify-content: center;
     align-items: center;
   }
-/* при приблежение у меня все съезжает,надо попроавить
+/*
    в инфроструктуре и тд все не в одну линиюю стоит
-   главная странница узка а котолок на всю */
+   главная странница узка а котолок на всю
+   каталог почему то потерял липкий футер*/
