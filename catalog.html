@@ -6,40 +6,40 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
-    <header class="page-header" data-test="header">
-      <a class="navigation-logo" href="index.html">
-        <img class="page-header-logo" src="images/logo.svg" width="140" height="70" alt="Логотип города Седона.">
-      </a>
-      <nav class="navigation">
-        <ul class="navigation-list">
-          <li class="navigation-item">
-            <a class="navigation-link" href="index.html" >Главная</a>
+    <div class="page-container">
+      <header class="page-header" data-test="header">
+        <a class="navigation-logo" href="index.html">
+          <img class="page-header-logo" src="images/logo.svg" width="140" height="70" alt="Логотип города Седона.">
+        </a>
+        <nav class="navigation">
+          <ul class="navigation-list">
+            <li class="navigation-item">
+              <a class="navigation-link" href="index.html">Главная</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#" >О Седоне</a>
+            </li>
+            <li class="navigation-item navigation-link-activated">
+              <a class="navigation-link navigation-link-current">Гостиницы</a>
+            </li>
+          </ul>
+
+         <ul class="navigation-user">
+          <li class="navigation-user-item">
+            <a class="navigation-link navigation-user-link-search" href="#">
+              <span class="visually-hidden">Поиск</span>
+            </a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#" >О Седоне</a>
+          <li class="navigation-user-item">
+            <a class="navigation-link navigation-user-link-favorite" href="#">
+              <span class="visually-hidden">Избранное</span>
+              <span class="notification-number">12</span>
+            </a>
           </li>
-          <li class="navigation-item navigation-link-activated">
-            <a class="navigation-link">Гостиницы</a>
-          </li>
-        </ul>
+         </ul>
       </nav>
-      <ul class="navigation-user">
-        <li class="navigation-user-item">
-          <a class="navigation-link navigation-user-link-search" href="#">
-            <span class="visually-hidden">Поиск</span>
-          </a>
-        </li>
-        <li class="navigation-user-item">
-          <a class="navigation-link navigation-user-link-favorite" href="#">
-            <span class="visually-hidden">Избранное</span>
-            <span class="notification-number">12</span>
-          </a>
-        </li>
-        <li class="navigation-user-item">
-          <a class="navigation-user-link button button-basic header-button " href="catalog.html">Хочу сюда!</a>
-        </li>
-      </ul>
-    </header>
+        <a class="button button-basic header-button " href="catalog.html">Хочу сюда!</a>
+      </header>
     <main class="main-inner" data-test="main">
      <section class="filters" data-test="filter">
       <h1 class="inner-header-title">Гостиницы Седоны</h1>
@@ -278,5 +278,6 @@
           <img class="copyright-image" src="images/icons/logo-company.svg" width="115" height="33" alt="Логотип Html Academy">
         </a>
       </footer>
+    </div>
   </body>
 </html>
