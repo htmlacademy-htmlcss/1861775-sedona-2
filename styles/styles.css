@@ -89,13 +89,16 @@ overflow: hidden;
 }
 .button-basic {
   background-color: #756157;
+  color: #ffffff;
 }
 
 .button-second {
   background-color: #82b3d3;
+  color: #ffffff;
 }
 .button-favorite{
   background-color: #7DB54F;
+  color: #ffffff;
 }
 .toggle-button{
   width: 20px;
@@ -198,17 +201,16 @@ overflow: hidden;
   }
 
   /*hero*/
-.hero{
+.hero {
+padding: 51px 371px 82px;
 text-align: center;
 background-image:url("../images/vector.svg"), url("../images/background-header.jpg");
 background-repeat: no-repeat;
 background-size: 100%, cover;
 background-position: center bottom, center;
-background-color: #3e9fe033;
+background-color: #031e2f33;
 }
-.hero-image {
-  margin: 51px 0 82px;
-}
+
 /*advantages*/
 .advantages-title-container{
   margin: 69px 0 90px;
@@ -239,7 +241,21 @@ font-weight: 700;
 line-height: 28px;
 text-align: center;
 text-transform: uppercase;
-margin:0 28px 62px;
+margin-block: 0 62px;
+position: relative;
+padding-inline: 29px;
+}
+.advantages-title::after{
+position: absolute;
+content: "";
+bottom: -31px;
+left: 85px;
+inline-size: 60px;
+block-size: 2px;
+background-color: rgba(0, 0, 0, 0.3);
+}
+.advantages-item:has(.advantages-img) .advantages-title::after {
+    background-color: rgba(255, 255, 255, 0.3);
 }
 .advantages-block{
   display: flex;
@@ -253,13 +269,14 @@ margin:0 28px 62px;
   padding: 102px 85px;
 }
 .advantages-card {
- margin: 102px 85px;
+ padding: 102px 85px;
 }
 .advantages-description{
 text-align: center;
 margin:0;
 }
 .advantages-item-large{
+display: flex;
 background-color:#82B3D3;
 color: #ffffff;
 min-width: 100%;
@@ -295,6 +312,7 @@ background-color:rgba(131, 179, 211, 0.12);
  }
  .services-list {
    display: flex;
+   flex-wrap: wrap;
    padding: 0;
    list-style: none;
    min-height: 385px;
@@ -302,6 +320,7 @@ background-color:rgba(131, 179, 211, 0.12);
  .services-item {
   width: calc(100%/3);
  padding: 80px 85px;
+ box-sizing: border-box;
  }
  .services-title {
    font-weight:700;
@@ -316,21 +335,41 @@ background-color:rgba(131, 179, 211, 0.12);
    margin: auto;
    max-width: 230px;
  }
- .services-item:nth-child(1) {
-  background: #83b3d31f url("../images/icons/house.svg") no-repeat;
-  background-position: center 82px;
+.services-item-icon-home::before{
+content: "";
+width: 75px;
+height: 72px;
+background-image:  url(../images/icons/house.svg);
+background-repeat:no-repeat ;
+background-size: auto;
+background-position: center;
+display: inline-block;
 }
-.services-item:nth-child(2) {
-  background:url("../images/icons/burger.svg") no-repeat;
-  background-position: center 82px;
+.services-item-icon-burger::before{
+content: "";
+width: 74px;
+height: 70px;
+background-image:  url(../images/icons/burger.svg);
+background-repeat:no-repeat ;
+background-size: auto;
+background-position: center;
+display: inline-block;
 }
-.services-item:nth-child(3) {
-  background: #83b3d31f url("../images/icons/gift.svg") no-repeat;
-  background-position: center 82px;
+.services-item-icon-gift::before{
+content: "";
+width: 64px;
+height: 76px;
+background-image:  url(../images/icons/gift.svg);
+background-repeat:no-repeat ;
+background-size: auto;
+background-position: center;
+display: inline-block;
 }
-.services-content{
-  margin-top: 102px;
+.services-item:nth-child(odd){
+  background-color:#83b3d31f ;
 }
+
+
 /*search*/
 .search {
   text-align: center;
@@ -422,27 +461,46 @@ padding: 5px;
   width: 100%;
   height: 100%;
 }
-.social-item {
+.social-link{
+  position: relative;
   width: 47px;
   height: 40px;
 }
-.social-item:nth-child(1) {
-  background: url("../images/icons/vk.svg") no-repeat;
-  background-position: center;
+.social-link-vk::after{
+content: "";
+width: 100%;
+height: 100%;
+background-image: url(../images/icons/vk.svg);
+background-repeat:no-repeat ;
+background-size: auto;
+background-position: center;
+display: inline-block;
 }
-.social-item:nth-child(2) {
-  background: url("../images/icons/telegram.svg") no-repeat;
-  background-position: center;
+.social-link-tg::after{
+content: "";
+width: 100%;
+height: 100%;
+background-image: url(../images/icons/telegram.svg);
+background-repeat:no-repeat ;
+background-size: auto;
+background-position: center;
+display: inline-block;
 }
-.social-item:nth-child(3) {
-  background: url("../images/icons/youtube.svg") no-repeat;
-  background-position: center;
+.social-link-youtube::after{
+content: "";
+width: 100%;
+height: 100%;
+background-image: url(../images/icons/youtube.svg);
+background-repeat:no-repeat ;
+background-size: auto;
+background-position: center;
+display: inline-block;
 }
-
 /*каталог*/
 .filters{
 color:#FFFFFF;
 background-image: url("../images/background-filters.jpg");
+background-color: #18296c;
 background-repeat: no-repeat;
 background-size: cover;
 width: auto;
@@ -506,8 +564,6 @@ text-align: left;
 margin-bottom: 32px;
 }
 .catalog-filter-list{
-  margin-right: 70px;
-  margin-bottom: 73px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -517,6 +573,12 @@ font-size: 18px;
 font-weight: 400;
 line-height: 23px;
 text-align: left;
+}
+.catalog-filter-item:not(:last-child) {
+    margin-block-end: 16px;
+}
+.contol-label{
+  cursor: pointer;
 }
 .catalog-filter-range-group{
 display: flex;
@@ -604,12 +666,18 @@ cursor: pointer;
   }
 /*каталог продуктов*/
 .catalog-products{
-  padding: 50px 70px 60px 70px;
+  padding-block: 50px 60px;
+}
+.catalog-wrapper{
+  inline-size: 1060px;
+  margin-inline: auto;
 }
 .container-title{
-  width: 100%;
-  display: flex;
-  margin-bottom:40px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 70px;
+margin-block-end: 40px;
 }
 .catalog-products-title{
 display: flex;
@@ -650,25 +718,46 @@ padding: 0;
 .view-buttons-item-current {
   border: 2px solid #000000;
 }
-.view-buttons-item:nth-child(1) {
-  background: url("../images/icons/tile-view.svg") no-repeat;
-  background-position: center;
+.view-button-tile::after{
+content: "";
+width: 100%;
+height: 100%;
+background-image: url(../images/icons/tile-view.svg);
+background-repeat:no-repeat ;
+background-size: auto;
+background-position: center;
+display: inline-block;
 }
-.view-buttons-item:nth-child(2) {
-  background: url("../images/icons/card-view.svg") no-repeat;
-  background-position: center;
+.view-button-card::after{
+content: "";
+width: 100%;
+height: 100%;
+background-image: url(../images/icons/card-view.svg);
+background-repeat:no-repeat ;
+background-size: auto;
+background-position: center;
+display: inline-block;
 }
-.view-buttons-item:nth-child(3) {
-  background: url("../images/icons/list-view.svg") no-repeat;
-  background-position: center;
+.view-button-list::after{
+content: "";
+width: 100%;
+height: 100%;
+background-image: url(../images/icons/list-view.svg);
+background-repeat:no-repeat ;
+background-size: auto;
+background-position: center;
+display: inline-block;
 }
 /*карточки отелей*/
 .catalog-list {
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(3, 1fr);
   padding: 0;
   margin: 0 0 80px;
   gap: 20px;
+  padding-block-end: 39px;
+  border-block-end: 2px solid #e6e6e6;
+  margin-block: 0 39px;
 }
 .catalog-item {
   display: grid;
@@ -722,6 +811,10 @@ padding: 0;
   width: 140px;
   margin: 0;
 }
+.catalog-rating{
+  padding: 0;
+  margin: 0;
+}
 
 /*pagination*/
 .pagination{
@@ -729,9 +822,9 @@ padding: 0;
   margin: 0;
   padding: 0;
   list-style: none;
-}
-.pagination-item:not(:last-child) {
-  margin-right: 8px;
+  flex-wrap: wrap;
+  gap: 8px;
+
 }
 .pagination-link{
   display: block;
@@ -754,7 +847,7 @@ padding: 0;
   }
   .pagination-text{
     color: #000000;
-    font-family: PT Sans;
+    font-family: "PT Sans" , "Arial", sans-serif;
     font-size: 22px;
     font-weight: 400;
     line-height: 26px;
@@ -767,7 +860,8 @@ padding: 0;
     align-items: center;
   }
 /*
-   в инфроструктуре и тд все не в одну линиюю стоит
-   иконки ширина и высота не такие
-   кнопки некоторые уехали из за илайн блока в button
+   1)фокус подпискт должен быть синий
+   2) див сделать на карточкти
+   3)вектор на логотип сделать
+   4)картинка в подписки очень растянутая
    /
