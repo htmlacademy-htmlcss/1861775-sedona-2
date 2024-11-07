@@ -72,12 +72,131 @@ overflow: hidden;
 }
 
 /* кнопки  */
-.button{
-  display: inline-block;
+.button {
+  background-color: transparent;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 700;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.button:focus {
+  border: 3px solid #83b3d3;
+}
+
+.button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button:disabled {
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.button-small {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.button-big {
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.button-dark {
+  background-color: #756157;
+  color: #ffffff;
+}
+.form-button-submit, .form-button-reset{
+    width: 191px;
+}
+.form-button-reset {
+    color: #ffffff;
+    margin-top: 32px;
+}
+
+.button-dark:hover {
+  background-color: #615048;
+  color: #ffffff;
+}
+
+.button-dark:focus {
+  background-color: #615048;
+  border: none;
+}
+
+.button-dark:active {
+  background-color: #756157;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-dark:disabled {
+  background-color: #e5e5e5;
+  color: #ffffff;
+}
+
+.button-light {
+  background-color: #82b3d3;
+  color: #ffffff;
+}
+
+.button-light:hover {
+  background-color: #68a2cA;
+  color: #ffffff;
+}
+
+.button-light:focus {
+  background-color: #68A2CA;
+  border: none;
+}
+
+.button-light:active {
+  background-color: #82b3d3;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-light:disabled {
+  background-color: #e5e5e5;
+  color: #ffffff;
+}
+
+.button-favourite {
+  background-color: #7db54f;
+  color: #ffffff;
+}
+
+.button-favourite:hover {
+  background-color: #6c9e42;
+  color: #ffffff;
+}
+
+.button-favourite:focus {
+  background-color: #6C9E42;
+  border: none;
+}
+
+.button-favourite:active {
+  background-color: #7db54f;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-favourite:disabled {
+  background-color: #e5e5e5;
+  color: #ffffff;
+}
+/* .button{
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
-  padding: 8px 0;
+  padding: 8px;
   border-radius: 4px;
   text-align: center;
   text-transform: uppercase;
@@ -90,9 +209,9 @@ overflow: hidden;
 .button:hover {
   color: rgba(255, 255, 255, 0.6);
 }
- /* {
+ .button-reset:focus {
   border: 3px solid #83b3d3;
-} */
+}
 .button:active {
   color: rgba(255, 255, 255, 0.3);
 }
@@ -132,7 +251,7 @@ overflow: hidden;
 .button-reset{
   margin-top: 32px;
   background-color: transparent;
-}
+} */
 /*title*/
 .second-title{
   font-size: 30px;
@@ -375,6 +494,7 @@ background-color:rgba(131, 179, 211, 0.12);
    display: flex;
    flex-wrap: wrap;
    padding: 0;
+   margin: 0;
    list-style: none;
    min-height: 385px;
  }
@@ -510,6 +630,7 @@ display: inline-block;
 .subscribe-button{
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+  min-width: 232px;
 }
 
 /*Футер*/
@@ -627,12 +748,38 @@ line-height: 21px;
 color:#FFFFFF;
 text-decoration: none;
 }
-.breadcrumbs-item {
-  margin-right: 28px;
+.breadcrumbs-link:hover{
+  color: rgba(255, 255, 255, 0.6)
 }
+.breadcrumbs-link:focus{
+color:rgba(255, 255, 255, 1)
+}
+.breadcrumbs-link:active{
+color:rgba(255, 255, 255, 0.3)
+}
+/* .breadcrumbs-item {
+  margin-right: 28px;
+} */
 .breadcrumbs-item:nth-child(1) {
   background: url("../images/icons/home.svg") no-repeat;
   background-position: center;
+  cursor: pointer;
+}
+.breadcrumbs-item:not(:first-child) {
+  margin-left: 28px;
+  position: relative;
+}
+
+.breadcrumbs-item:not(:first-child):before {
+  background-image: url("../images/icons/breadcrumbs-arrow.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  content: "";
+  height: 15px;
+  left: -19px;
+  position: absolute;
+  top: 4px;
+  width: 9px;
 }
 
 /*фильтры */
@@ -665,13 +812,46 @@ margin-bottom: 32px;
   list-style: none;
 }
 .catalog-filter-item{
+position: relative;
 font-size: 18px;
 font-weight: 400;
 line-height: 23px;
 text-align: left;
 }
+.catalog-filter-item .checkbox {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+  padding-left: 36px;
+}
 .catalog-filter-item:not(:last-child) {
     margin-block-end: 16px;
+}
+.filters-form-group-checkbox .filters-form-mark {
+  background-color: #ffffff;
+  border-radius: 4px;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  top: 5px;
+  width: 20px;
+}
+
+.filters-form-group-checkbox .checkbox
+.filters-checkbox:checked + .filters-form-mark {
+  background-image: url(../images/icons/tiked.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.filters-form-group-radio .filters-form-mark {
+  background-color: #ffffff;
+  border-radius: 50%;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  top: 5px;
+  width: 20px;
 }
 .contol-label{
   cursor: pointer;
@@ -714,11 +894,12 @@ height: fit-content;
   border-top-right-radius: 4px;
   border-bottom-right-radius:4px;
 }
-.catalog-filter-slaider{
+/*Слайдер*/
+/* .catalog-filter-slaider{
   width: 100%;
   margin-top: 36px;
-}
-.catalog-filter-slaider-total{
+} */
+/* .catalog-filter-slaider-total{
   width:100%;
   height: 4px;
   background-color: rgba(255, 255, 255, 0.3);
@@ -731,14 +912,8 @@ background-color: #FFFFFF;
 position: absolute;
 left:0;
 top:0;
-}
-.catalog-form-menu{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-top: 56px;
-}
-.catalog-filter-slaider-current::after{
+} */
+/* .catalog-filter-slaider-current::after{
 content: "";
 width: 20px;
 height: 20px;
@@ -759,14 +934,59 @@ cursor: pointer;
   top:-9px;
   border-radius: 5px;
   cursor: pointer;
-  }
+  } */
+  .range-scale {
+  position: relative;
+  height: 4px;
+  background-color: #F2F2F2;
+  margin-top: 36px;
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #ffffff;
+  left: 5px;
+  width: 200px
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background-color: #FFFFFF;
+}
+
+.range-toggle:active,
+.range-toggle:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.toggle-min {
+  top: -8px;
+  left: -10px;
+}
+
+.toggle-max {
+  top: -8px;
+  right: -10px;
+}
+.catalog-form-menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 56px;
+}
 /*каталог продуктов*/
 .catalog-products{
   padding-block: 50px 60px;
-}
-.catalog-wrapper{
-  inline-size: 1060px;
-  margin-inline: auto;
 }
 .container-title{
 display: flex;
@@ -844,6 +1064,17 @@ background-size: auto;
 background-position: center;
 display: inline-block;
 }
+.view-buttons-item:hover {
+  border-color: #000000;
+}
+
+.view-buttons-item:focus {
+  border-color: #68A2CA;
+}
+
+.view-buttons-item:active {
+  border-color: #000000;
+}
 /*карточки отелей*/
 .catalog-list {
   display: grid;
@@ -907,8 +1138,16 @@ display: inline-block;
   margin: 0;
 }
 .catalog-rating{
-  padding: 0;
-  margin: 0;
+  background-color: #f2f2f2;
+    border-radius: 4px;
+    color: #333333;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0;
+    padding: 8px;
+    text-align: center;
+    text-transform: uppercase;
+
 }
 
 /*pagination*/
@@ -954,9 +1193,22 @@ display: inline-block;
     justify-content: center;
     align-items: center;
   }
+  .pagination-link:not(.pagination-current):hover {
+  background-color: #68A2CA;
+}
+
+.pagination-link:not(.pagination-current):focus {
+  background-color: #68A2CA;
+}
+
+.pagination-link:not(.pagination-current):active {
+  background-color: #82B3D3;
+  color: rgba(255, 255, 255, 0.3);
+}
 /*
-   1)фокус подпискт должен быть синий
-   2) див сделать на карточкти
-   3)вектор на логотип сделать
-   4)картинка в подписки очень растянутая
+   пиксель перфект проверить
+   звезды сделать
+   хлебные крошки
+   модальное окно
+   поравить все в вс коде что бы ровно код был
    /
