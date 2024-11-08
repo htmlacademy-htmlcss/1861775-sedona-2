@@ -101,19 +101,21 @@
               <li class="catalog-filter-item">
                 <label class="checkbox">
                   <input class="visually-hidden filters-checkbox" type="checkbox" name="pool" checked>
-                 <span class="contol-label">Бассейн</span>
-                 <span class="filters-form-mark"></span>
+                  <span class="filters-form-mark"></span>
+                  <span class="contol-label">Бассейн</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="checkbox">
-                  <input class="checkbox-input" type="checkbox" name="parking" checked>
+                  <input class="visually-hidden filters-checkbox" type="checkbox" name="parking" checked>
+                  <span class="filters-form-mark"></span>
                   <span class="contol-label">Парковка</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="checkbox">
-                  <input class="checkbox-input" type="checkbox" name="parking">
+                  <input class="visually-hidden filters-checkbox" type="checkbox" name="parking">
+                  <span class="filters-form-mark"></span>
                   <span class="contol-label">Wi-Fi</span>
                 </label>
               </li>
@@ -124,19 +126,22 @@
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
                 <label class="radio">
-                  <input class="radio-input" type="radio" name="house-type" value="hotel" checked>
+                  <input class="visually-hidden radio-input" type="radio" name="house-type" value="hotel" checked>
+                  <span class="radio-mark"></span>
                   <span class="contol-label">Гостиница</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="radio">
-                  <input class="radio-input" type="radio" name="house-type" value="hotel">
+                  <input class="visually-hidden radio-input" type="radio" name="house-type" value="hotel">
+                  <span class="radio-mark"></span>
                   <span class="contol-label">Мотель</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="radio">
-                  <input class="radio-input" type="radio" name="house-type" value="hotel">
+                  <input class="visually-hidden radio-input" type="radio" name="house-type" value="hotel">
+                  <span class="radio-mark"></span>
                   <span class="contol-label">Апартаменты</span>
                 </label>
               </li>
@@ -177,7 +182,7 @@
       <section class="catalog-products" data-test="catalog">
         <div class="catalog-wrapper wrapper">
         <div class="container-title">
-        <h2 class="catalog-products-title">Найдено гостиниц: <span>38</span></h2>
+         <h2 class="catalog-products-title">Найдено гостиниц: <span>38</span></h2>
         <select class="select-control" aria-label="Сортировка">
           <option value="popular">Сначала популярные</option>
           <option value="popular" selected>Сначала дешевые</option>
