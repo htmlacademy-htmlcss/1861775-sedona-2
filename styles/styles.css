@@ -12,7 +12,7 @@
   src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
-/*общие стили*/
+/*Общие стили*/
 
 *,
 *::before,
@@ -43,7 +43,7 @@ img {
 }
  .page-container {
   background-color: #ffffff;
-  box-shadow: 0 0 15px 0 #00000033;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -71,7 +71,7 @@ overflow: hidden;
   flex-grow: 1;
 }
 
-/* кнопки  */
+/* Кнопки  */
 .button {
   background-color: transparent;
   border: none;
@@ -191,6 +191,21 @@ overflow: hidden;
 .button-favourite:disabled {
   background-color: #e5e5e5;
   color: #ffffff;
+}
+/*Инпуты*/
+.input:hover {
+  color:  #000000;
+  background-color: #e6e6e6;
+  font-weight: 700;
+}
+
+.input:active {
+  background-color: #e6e6e6;
+}
+.input:focus {
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
+  outline-offset: -3px;
 }
 
 /*title*/
@@ -312,8 +327,8 @@ padding: 0;
   line-height: 10px;
   padding: 5px 5px 5px 4px;
   position: absolute;
-  right: 4px;
-  top: -3px;
+  right: 3px;
+  top: -8px;
 }
 
 .navigation-user-link.button {
@@ -329,7 +344,7 @@ background-image:url("../images/vector.svg"), url("../images/background-header.j
 background-repeat: no-repeat;
 background-size: 100%, cover;
 background-position: center bottom, center;
-background-color: #031e2f33;
+background-color: rgba(3, 30, 47, 0.2);
 }
 
 /*advantages*/
@@ -365,15 +380,18 @@ text-transform: uppercase;
 margin-block: 0 62px;
 position: relative;
 padding-inline: 29px;
+padding-bottom: 30px;
+margin-bottom: 30px;
 }
 .advantages-title::after{
 position: absolute;
 content: "";
-bottom: -31px;
-left: 85px;
+top:100%;
+left: 50%;
 inline-size: 60px;
 block-size: 2px;
 background-color: rgba(0, 0, 0, 0.3);
+transform: translateX(-50%);
 }
 .advantages-item:has(.advantages-img) .advantages-title::after {
     background-color: rgba(255, 255, 255, 0.3);
@@ -407,7 +425,7 @@ max-width: 100%;
 background-color:rgba(131, 179, 211, 0.12);
 }
 .medium-color{
-  background: #83B3D333;
+  background: rgba(131, 179, 211, 0.2);
 
 }
 
@@ -488,7 +506,7 @@ background-position: center;
 display: inline-block;
 }
 .services-item:nth-child(odd){
-  background-color:#83b3d31f ;
+  background-color:rgba(131, 179, 211, 0.122) ;
 }
 
 
@@ -540,7 +558,7 @@ display: inline-block;
   max-width: 684px;
   margin: 0 auto;
 }
-/*Инпутс*/
+/*Подписка*/
 .subscribe-form-input {
   color: #000000;
   font-size: 18px;
@@ -554,19 +572,6 @@ display: inline-block;
   flex-grow: 1;
   cursor: pointer;
   font-family: inherit;
-}
-.subscribe-form-input:hover {
-  color:  #000000;
-  background-color: #e6e6e6;
-  font-weight: 700;
-}
-
-.subscribe-form-input:active {
-  background-color: #e6e6e6;
-}
-.subscribe-form-input:focus {
-  background-color: #e6e6e6;
-  outline: 3px solid #83b3d3;
 }
 .subscribe-button{
   border-top-left-radius: 0;
@@ -1010,6 +1015,14 @@ padding: 0;
   cursor: pointer;
   margin-left: auto;
 }
+.select-control:hover,
+.select-control:focus-visible {
+  outline-color: #68a2ca;
+}
+
+.select-control:disabled {
+  opacity: 0.3;
+}
 .view-buttons{
   display: flex;
   flex-wrap: wrap;
@@ -1234,7 +1247,7 @@ display: inline-block;
 }
 /*
    пиксель перфект проверить
-   звезды сделать
+
    хлебные крошки
    модальное окно
    поравить все в вс коде что бы ровно код был
