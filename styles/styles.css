@@ -227,6 +227,7 @@ img {
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .lead-text {
@@ -362,7 +363,7 @@ img {
 
 /*hero*/
 .hero {
-  padding: 51px 371px 82px;
+  padding: 51px 371px 79px;
   text-align: center;
   background-image: url("../images/vector.svg"), url("../images/background-header.jpg");
   background-repeat: no-repeat;
@@ -373,7 +374,7 @@ img {
 
 /*advantages*/
 .advantages-title-container {
-  margin: 69px 0 90px;
+  margin: 69px 0 87px;
 }
 
 .advantages-lead {
@@ -437,11 +438,11 @@ img {
 }
 
 .advantages-container {
-  padding: 102px 85px;
+  padding: 115px 85px 114px;
 }
 
 .advantages-card {
-  padding: 102px 85px;
+  padding: 104px 85px 102px;
 }
 
 .advantages-description {
@@ -510,6 +511,7 @@ img {
   line-height: 28px;
   text-align: center;
   text-transform: uppercase;
+  margin-top: 25px;
   margin-bottom: 30px;
 }
 
@@ -519,37 +521,29 @@ img {
   max-width: 230px;
 }
 
-.services-item-icon-home::before {
+.services-item::before {
   content: "";
   width: 75px;
   height: 72px;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  display: inline-block;
+}
+
+.services-item_home::before {
   background-image: url(../images/icons/house.svg);
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: center;
-  display: inline-block;
 }
 
-.services-item-icon-burger::before {
-  content: "";
-  width: 74px;
-  height: 70px;
+.services-item_burger::before {
+
   background-image: url(../images/icons/burger.svg);
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: center;
-  display: inline-block;
+
 }
 
-.services-item-icon-gift::before {
-  content: "";
-  width: 64px;
-  height: 76px;
+.services-item_gift::before {
   background-image: url(../images/icons/gift.svg);
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: center;
-  display: inline-block;
+
 }
 
 .services-item:nth-child(odd) {
@@ -560,13 +554,13 @@ img {
 /*Поиск*/
 .search {
   text-align: center;
-  padding: 96px 0;
+  padding: 65px 0 95px;
 }
 
 .search-description {
   font-size: 22px;
   line-height: 26px;
-  margin: 0 auto 54px auto;
+  margin: 0 auto 54px;
 }
 
 .search-button {
@@ -580,7 +574,7 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
-  padding: 96px 0 104px;
+  padding: 72px 0 104px;
   color: #ffffff;
 }
 
@@ -1427,6 +1421,7 @@ img {
   background-color: #82B3D3;
   color: rgba(255, 255, 255, 0.3);
 }
+
 
 /*
    пиксель перфект проверить
