@@ -206,6 +206,11 @@ img {
 }
 
 /*Инпуты*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 .input:hover {
   color: #000000;
   background-color: #e6e6e6;
@@ -222,7 +227,7 @@ img {
   outline-offset: -3px;
 }
 
-/*title*/
+/*титл*/
 .second-title {
   font-size: 30px;
   font-weight: 700;
@@ -276,6 +281,7 @@ img {
   padding: 20px 0;
   position: relative;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .navigation-link[aria-current="page"]::after {
@@ -362,7 +368,7 @@ img {
   min-width: 160px;
 }
 
-/*hero*/
+/*блог герой*/
 .hero {
   padding: 51px 371px 79px;
   text-align: center;
@@ -373,7 +379,7 @@ img {
   background-color: rgba(3, 30, 47, 0.2);
 }
 
-/*advantages*/
+/*преимущества*/
 .advantages-title-container {
   margin: 69px 0 87px;
 }
@@ -608,20 +614,27 @@ img {
 }
 
 
-.subscribe-form-input {
+
+.form-input {
   color: #000000;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
   width: 412px;
-  border-radius: 4px 0 0 4px;
+  border-radius: 4px;
   border: none;
   background: #f2f2f2;
-  padding: 14px 0 14px 20px;
-  flex-grow: 1;
   cursor: pointer;
   font-family: inherit;
 }
+
+.subscribe-form-input {
+  flex-grow: 1;
+  padding: 0 20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
 
 .subscribe-button {
   border-top-left-radius: 0;
@@ -1361,7 +1374,7 @@ img {
   text-transform: uppercase;
 }
 
-/*pagination*/
+/*пагинация*/
 .pagination {
   display: flex;
   margin: 0;
@@ -1694,9 +1707,3 @@ img {
 .modal-container-close {
   display: none;
 }
-/*
-   пиксель перфект проверить
-
-   чек боксы нет актива при табе
-
-   /
