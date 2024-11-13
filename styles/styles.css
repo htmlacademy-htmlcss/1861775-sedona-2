@@ -320,6 +320,7 @@ input::-webkit-inner-spin-button {
 }
 
 .navigation-user-link:not(.button) {
+  color: #000000;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 21px;
