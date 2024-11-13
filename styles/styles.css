@@ -1471,7 +1471,10 @@ input::-webkit-inner-spin-button {
 }
 
 .modal-close-button svg {
-  vertical-align: middle;
+  position: absolute;
+  top: 19px;
+  right: 18px;
+
 }
 
 .modal-close-button:hover {
