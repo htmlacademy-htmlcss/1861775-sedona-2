@@ -80,13 +80,14 @@ img {
 
 /* Кнопки  */
 .button {
+  display: inline-block;
   background-color: transparent;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-family: inherit;
   font-weight: 700;
-  padding: 8px;
+  padding: 8px 16px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -580,7 +581,7 @@ img {
 
 .subscribe-catalog {
   text-align: center;
-  padding: 96px 0 104px;
+  padding: 72px 0 104px;
 }
 
 .subscribe-title {
@@ -982,7 +983,7 @@ img {
 }
 
 .catalog-input-renge-input {
-  padding: 12px 20px;
+  padding: 11px 20px 10px;
   background-color: #f2f2f2;
   border: none;
   cursor: pointer;
@@ -991,7 +992,7 @@ img {
   font-family: inherit;
   font-size: 18px;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 27px;
   width: 143px;
 }
 
@@ -1128,7 +1129,6 @@ img {
 }
 
 .catalog-products-title {
-  display: flex;
   align-items: center;
   font-size: 30px;
   font-weight: 700;
@@ -1141,7 +1141,7 @@ img {
 .select-control {
   appearance: none;
   background: url(../images/icons/arrow-2.svg) no-repeat right center;
-  background-position-x: 260px;
+  background-position-x: 266px;
   color: #333333;
   font-family: inherit;
   font-size: 18px;
@@ -1150,7 +1150,7 @@ img {
   border-radius: 4px;
   background-color: #ffffff;
   min-width: 292px;
-  padding: 12px 18px;
+  padding: 12px 26px;
   cursor: pointer;
   margin-left: auto;
 }
@@ -1267,7 +1267,7 @@ img {
 .catalog-item-title {
   font-size: 24px;
   font-weight: 700;
-  line-height: 28px;
+  line-height: 29px;
   padding: 0;
   margin: 0;
 }
@@ -1381,7 +1381,7 @@ img {
   border-radius: 4px;
   font-size: 20px;
   font-weight: 700;
-  line-height: 36px;
+  line-height: 35px;
   text-align: center;
   color: #FFFFFF;
   background-color: #82B3D3;
@@ -1422,7 +1422,278 @@ img {
   color: rgba(255, 255, 255, 0.3);
 }
 
+/* Модальное окно */
 
+.modal-container {
+  background-color: rgba(242, 242, 242, 0.8);
+  display: flex;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.modal {
+  background-color: #ffffff;
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+  margin: auto;
+  max-height: 100%;
+  overflow-y: auto;
+  padding: 64px 70px;
+  position: relative;
+}
+
+.modal-close-button {
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 52px;
+  position: absolute;
+  padding: 0;
+  right: 52px;
+  width: 52px;
+}
+
+.modal-close-button svg {
+  vertical-align: middle;
+}
+
+.modal-close-button:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:focus {
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
+}
+
+.modal-close-button:active {
+  background-color: #e6e6e6;
+  color: rgba(117, 97, 87, 0.3)
+}
+
+.modal-search {
+  border-radius: 30px;
+  box-sizing: border-box;
+  width: 717px;
+}
+
+.modal-title {
+  font-size: 30px;
+  line-height: 36px;
+  margin: 0 0 64px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.search-form {
+  display: grid;
+  gap: 48px 88px;
+  grid-template-columns: 247px 242px;
+}
+
+.search-form-group {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-form-label {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+
+.search-form-input {
+  font-weight: 700;
+  height: 48px;
+}
+
+.search-form-dates {
+  grid-column: 1 / -1;
+}
+
+.search-wrapper {
+  position: relative;
+}
+
+.search-form-dates .search-form-input {
+  min-width: 440px;
+  padding: 12px 20px;
+}
+
+.search-form-dates::after {
+  background-image: url("../images/icons/calendar.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  content: "";
+  height: 20px;
+  position: absolute;
+  right: 80px;
+  width: 20px;
+}
+
+.search-form-dates-message {
+  color: #333333;
+  font-size: 16px;
+  font-weight: 400;
+  left: 20px;
+  line-height: 21px;
+  position: absolute;
+  text-transform: none;
+  top: calc(100% + 4px);
+}
+
+.search-form-message-warning {
+  color: #ff5757;
+}
+
+.search-form-group-number .search-form-label {
+  margin-right: 46px;
+}
+
+.search-form-input[type="number"] {
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  width: 31px;
+}
+
+.search-form-input[type="number"]:hover,
+.search-form-input[type="number"]:focus,
+.search-form-input[type="number"]:active {
+  background-color: #f2f2f2;
+  border-radius: 0;
+  outline: none;
+}
+
+.search-form-adults {
+  grid-column: 1 / 2;
+  position: relative;
+}
+
+.search-form-kids {
+  grid-column: 2 / -1;
+}
+
+.search-form-input-with-control {
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  width: 110px;
+}
+
+.search-form-control-button {
+  background-color: #f2f2f2;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  height: 20px;
+  margin: 14px 10px;
+  padding: 0 3px;
+  width: 20px;
+}
+
+.search-form-control-button svg {
+  background-color: #f2f2f2;
+  vertical-align: middle;
+}
+
+.search-form-control-button:hover {
+  color: #000000;
+}
+
+.search-form-control-button:focus {
+  color: #000000;
+  border-radius: 4px;
+  outline: 3px solid #82b3d3;
+}
+
+.search-form-control-button:active {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.search-form-kids .search-form-label {
+  position: relative;
+}
+
+.search-form-tooltip {
+  left: 59px;
+  position: absolute;
+}
+
+.search-form-tooltip-toggle {
+  background-color: #83b3d3;
+  border: none;
+  border-radius: 50%;
+  color: #ffffff;
+  cursor: pointer;
+  display: block;
+  height: 26px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 26px;
+}
+
+.search-form-tooltip-toggle:hover,
+.search-form-tooltip-toggle:focus {
+  background-color: #68a2ca;
+}
+
+.search-form-tooltip-text {
+  background-color: #333333;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  color: #ffffff;
+  display: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: none;
+  top: 42px;
+  padding: 19px 18px 23px 22px;
+  position: absolute;
+  right: -115px;
+  width: 256px;
+}
+
+.search-form-tooltip-text::before {
+  background-color: #333333;
+  content: "";
+  height: 13px;
+  left: 47%;
+  position: absolute;
+  top: -7px;
+  transform: rotate(45deg);
+  width: 13px;
+}
+
+.search-form-tooltip:hover .search-form-tooltip-text,
+.search-form-tooltip:focus .search-form-tooltip-text {
+  display: block;
+}
+
+.search-form-button {
+  border-radius: 10px;
+  grid-column: 1 / -1;
+  font-size: 20px;
+  line-height: 24px;
+  padding: 18px 0;
+}
+
+.modal-container-close {
+  display: none;
+}
 /*
    пиксель перфект проверить
 
