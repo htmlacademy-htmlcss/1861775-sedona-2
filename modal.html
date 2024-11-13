@@ -24,7 +24,7 @@
                 <a class="navigation-link" aria-current="page">Главная</a>
               </li>
               <li class="navigation-item">
-                <a class="navigation-link">О Седоне</a>
+                <a class="navigation-link" href="#">О Седоне</a>
               </li>
               <li class="navigation-item navigation-link-activated">
                 <a class="navigation-link" href="catalog.html">Гостиницы</a>
@@ -56,7 +56,8 @@
                 </a>
               </li>
               <li class="navigation-user-item"></li>
-              <a class="navigation-user-link button button-small button-dark" href="catalog.html">Хочу сюда!</a>
+              <a class="navigation-user-link button button-small button-dark" href="catalog.html">Хочу
+                сюда!</a>
               </li>
             </ul>
           </nav>
@@ -167,9 +168,9 @@
             Укажите предполагаемые даты поездки,<br>
             и мы покажем вам лучшие предложения гостиниц в Седоне
           </p>
-          <a class="search-button button button-big button-dark" href="modal.html">
+          <button class="search-button button button-big button-dark">
             Поиск гостиницы в Седоне
-          </a>
+          </button>
         </section>
         <section class="subscribe" data-test="subscribe">
           <h2 class="subscribe-title second-title">Подпишитесь на рассылку</h2>
@@ -240,6 +241,92 @@
           </a>
         </div>
       </footer>
+    </div>
+    <div class="modal-container">
+      <div class="modal modal-search" data-test="modal">
+        <button class="modal-close-button" type="button">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M14.49 1.783 13.199.49 7.49 6.198 1.783.491.49 1.783 6.198 7.49.49 13.198l1.293 1.293L7.49 8.783l5.708 5.708 1.293-1.293-5.708-5.707 5.708-5.708Z" />
+          </svg>
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="search-form-group search-form-dates">
+              <label class="search-form-label" for="search-form-check-in">Дата заезда:</label>
+              <div class="search-wrapper">
+                <input class="search-form-input form-input input" type="text" name="check-in" id="search-form-check-in"
+                  value="27 апреля 2020" placeholder="Укажите дату" required>
+                <span class="search-form-dates-message search-form-message-warning">Мы не можем отправить вас в
+                  прошлое.</span>
+              </div>
+            </div>
+            <div class="search-form-group search-form-dates">
+              <label class="search-form-label" for="search-form-check-out">Дата выезда:</label>
+              <div class="search-wrapper">
+                <input class="search-form-input form-input input" type="text" name="check-out"
+                  id="search-form-check-out" value="1 сентября 2023" placeholder="Укажите дату" required>
+                <span class="search-form-dates-message">На эти даты есть свободные номера. Пока есть.</span>
+              </div>
+            </div>
+            <div class="search-form-group search-form-group-number search-form-adults">
+              <label class="search-form-label" for="search-form-adults">Взрослые:</label>
+              <span class="search-form-input-with-control">
+                <button class="search-form-control-button search-form-control-minus" type="button">
+                  <svg width="14" height="2" viewBox="0 0 14 2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0v2h14V0H0Z" />
+                  </svg>
+                  <span class="visually-hidden">Минус</span>
+                </button>
+                <input class="search-form-input form-input" type="number" name="adults" id="search-form-adults"
+                  value="2" min="0" required>
+                <button class="search-form-control-button search-form-control-plus" type="button">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 6H8V0H6v6H0v2h6v6h2V8h6V6Z" />
+                  </svg>
+                  <span class="visually-hidden">Плюс</span>
+                </button>
+              </span>
+            </div>
+            <div class="search-form-group search-form-group-number search-form-kids">
+              <label class="search-form-label" for="search-form-kids">Дети:
+                <span class="search-form-tooltip">
+                  <span class="search-form-tooltip-toggle" aria-labelledby="search-form-tooltip-label" tabindex="0">
+                    <svg class="search-form-tooltip-icon" width="2" height="12" viewBox="0 0 2 12" fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0h2v2H0V0Zm2 12H0V3h2v9Z" />
+                    </svg>
+                  </span>
+                  <span class="search-form-tooltip-text" role="tooltip" id="search-form-tooltip-label">Укажите
+                    количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет
+                    размещаются бесплатно.</span>
+                </span>
+              </label>
+              <span class="search-form-input-with-control">
+                <button class="search-form-control-button search-form-control-minus" type="button">
+                  <svg width="14" height="2" viewBox="0 0 14 2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0v2h14V0H0Z" />
+                  </svg>
+                  <span class="visually-hidden">Минус</span>
+                </button>
+                <input class="search-form-input form-input " type="number" name="kids" id="search-form-kids" value="2"
+                  min="0" required>
+                <button class="search-form-control-button search-form-control-plus" type="button">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 6H8V0H6v6H0v2h6v6h2V8h6V6Z" />
+                  </svg>
+                  <span class="visually-hidden">Плюс</span>
+                </button>
+              </span>
+            </div>
+            <button class="button search-form-button button-big button-light" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
     </div>
   </body>
 
