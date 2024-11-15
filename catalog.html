@@ -56,7 +56,7 @@
                 </a>
               </li>
               <li class="navigation-user-item">
-                <a class="navigation-user-link button button-small button-dark" href="catalog.html">Хочу сюда!</a>
+                <a class="navigation-user-link button button-small button-dark">Хочу сюда!</a>
               </li>
             </ul>
           </nav>
@@ -134,11 +134,11 @@
               <fieldset class="catalog-filter-group catalog-filter-range-group">
                 <legend class="catalog-filter-title">Стоимость, ₽:</legend>
                 <label class="catalog-filter-range-label">
-                  <input class="catalog-input-renge-input input" type="text" value="0" name="min-cost">
+                  <input class="catalog-input-range-input input" type="text" value="0" name="min-cost">
                   <span class="catalog-input-range-label-text">от</span>
                 </label>
                 <label class="catalog-filter-range-label">
-                  <input class="catalog-input-renge-input catalog-input-renge-input-reverse input" type="text"
+                  <input class="catalog-input-range-input catalog-input-range-input-reverse input" type="text"
                     value="9000" name="max-cost">
                   <span class="catalog-input-range-label-text">до</span>
                 </label>
@@ -201,8 +201,8 @@
                 <p class="catalog-price">От 4000 ₽</p>
                 <a class="catalog-button button button-small button-dark" href="#">Подробнее</a>
                 <button class="catalog-button button button-small button-light" type="button">В избранное</button>
-                <div class="card-stars"><span class="visually-hidden card-stars-count">4</span> <span
-                    class="visually-hidden ">звезды</span></div>
+                <div class="card-stars"><span class="visually-hidden ">4 звезды</span>
+                </div>
                 <p class="catalog-rating">Рейтинг: 8,5</p>
               </li>
               <li class="catalog-item">
@@ -217,8 +217,8 @@
                 <p class="catalog-price">От 5000 ₽</p>
                 <a class="card-button button button-small button-dark" href="#">Подробнее</a>
                 <button class="card-button  button button-small button-favourite" type="button">В избранном</button>
-                <div class="card-stars"><span class="visually-hidden card-stars-count">4</span> <span
-                    class="visually-hidden ">звезды</span></div>
+                <div class="card-stars"><span class="visually-hidden ">4 звезды</span>
+                </div>
                 <p class="catalog-rating">Рейтинг: 9,2</p>
               </li>
               <li class="catalog-item">
@@ -233,8 +233,8 @@
                 <p class="catalog-price">От 2500 ₽</p>
                 <a class="catalog-buttonbutton button button-small button-dark" href="#">Подробнее</a>
                 <button class="catalog-button button button-small button-light" type="button">В избранное</button>
-                <div class="card-stars"><span class="visually-hidden card-stars-count">3</span> <span
-                    class="visually-hidden">звезды</span></div>
+                <div class="card-stars"><span class="visually-hidden ">3 звезды</span>
+                </div>
                 <p class="catalog-rating">Рейтинг: 6,9</p>
               </li>
               <li class="catalog-item">
@@ -249,8 +249,8 @@
                 <p class="catalog-price">От 1500 ₽</p>
                 <a class="catalog-button button button-small button-dark" href="#">Подробнее</a>
                 <button class="catalog-button button button-small button-light" type="button">В избранное</button>
-                <div class="card-stars"><span class="visually-hidden card-stars-count">2</span> <span
-                    class="visually-hidden ">звезды</span></div>
+                <div class="card-stars"><span class="visually-hidden ">2 звезды</span>
+                </div>
                 <p class="catalog-rating">Рейтинг: 5,0</p>
               </li>
             </ul>
@@ -285,7 +285,7 @@
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="user-email">Ваш email</label>
             <input class="subscribe-form-input form-input catalog-input input" type="text" id="user-email"
-              name="user-email" placeholder="Ваш e-mail">
+              name="user-email" placeholder="Ваш e-mail" required="">
             <button class="subscribe-button button button-light button-big" type="submit">Подписаться</button>
           </form>
         </section>
