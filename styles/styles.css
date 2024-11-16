@@ -247,7 +247,7 @@ img {
   font-size: 22px;
   line-height: 26px;
   text-align: center;
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -494,10 +494,10 @@ img {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
-.medium-color {
-  background: rgba(131, 179, 211, 0.2);
-
+.advantages-light:nth-child(odd) {
+  background-color: rgba(131, 179, 211, 0.2);
 }
+
 
 /*сервис лист*/
 .services {
@@ -556,7 +556,7 @@ img {
 .services-item::before {
   content: "";
   width: 75px;
-  height: 72px;
+  height: 75px;
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
@@ -586,7 +586,7 @@ img {
 /*Поиск*/
 .search {
   text-align: center;
-  padding: 65px 0 95px;
+  padding: 71px 0 95px;
 }
 
 .search-description {
@@ -606,13 +606,13 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
-  padding: 72px 0 104px;
+  padding: 73px 0 104px;
   color: #ffffff;
 }
 
 .subscribe-catalog {
   text-align: center;
-  padding: 72px 0 104px;
+  padding: 71px 0 104px;
 }
 
 .subscribe-title {
@@ -687,6 +687,7 @@ img {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  max-width: 200px;
 }
 
 .social-item {
@@ -718,6 +719,11 @@ img {
   font-style: normal;
   line-height: 40px;
   text-decoration: none;
+}
+
+.footer-contacts {
+  max-width: 400px;
+  text-align: center;
 }
 
 .phone:hover {
@@ -1020,17 +1026,17 @@ img {
 }
 
 .catalog-input-range-input {
-  padding: 11px 20px 10px;
+  padding: 11px 38px 10px 20px;
   background-color: #f2f2f2;
   border: none;
   cursor: pointer;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
+  border-radius: 4px 0 0 4px;
   font-family: inherit;
   font-size: 18px;
   font-weight: 700;
   line-height: 27px;
   width: 143px;
+
 }
 
 
@@ -1152,7 +1158,7 @@ img {
 
 /*каталог продуктов*/
 .catalog-products {
-  padding-block: 50px 60px;
+  padding-block: 52px 60px;
 }
 
 .container-title {
@@ -1176,7 +1182,7 @@ img {
 .select-control {
   appearance: none;
   background: url(../images/icons/arrow-down.svg) no-repeat right center;
-  background-position-x: 266px;
+  background-position-x: 259px;
   color: #333333;
   font-family: inherit;
   font-size: 18px;
@@ -1185,7 +1191,7 @@ img {
   border-radius: 4px;
   background-color: #ffffff;
   min-width: 292px;
-  padding: 12px 26px;
+  padding: 12px 18px;
   cursor: pointer;
   margin-left: auto;
 }
@@ -1282,7 +1288,7 @@ img {
   grid-template-rows: 0fr 0fr auto 0fr 0fr;
   row-gap: 16px;
   column-gap: 20px;
-  padding: 20px;
+  padding: 19px 20px 20px 19px;
   margin: 0;
   border-radius: 4px;
   box-shadow: 0 0 0 1px #e6e6e6;
@@ -1356,7 +1362,7 @@ img {
   font-size: 16px;
   line-height: 20px;
   margin: 0;
-  padding: 8px;
+  padding: 9px;
   text-align: center;
   text-transform: uppercase;
 
@@ -1364,20 +1370,27 @@ img {
 
 .card-stars {
   display: flex;
-  gap: 6px;
-  list-style-type: none;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+  align-items: center;
 }
 
-.card-stars-item {
-  align-self: center;
+.card-star {
+  block-size: 17px;
   background-image: url(../images/icons/star.svg);
-  background-position: center;
   background-repeat: space;
-  height: 18px;
-  width: 18px;
+  background-position: center;
+  background-size: 18px 17px;
+}
+
+.card-star-four {
+  inline-size: 89px;
+}
+
+.card-star-three {
+  inline-size: 66px;
+}
+
+.card-star-two {
+  inline-size: 42px;
 }
 
 .card-rating {
@@ -1406,9 +1419,9 @@ img {
 .pagination-link {
   display: block;
   box-sizing: border-box;
-  width: 60px;
+  min-width: 60px;
   height: 60px;
-  padding: 12px 18px;
+  padding: 14px 18px;
   border-radius: 4px;
   font-size: 20px;
   font-weight: 700;
